@@ -1,6 +1,6 @@
 require 'mysql'
 
-class MysqlDatabase
+class CrudClass
 
   def initialize(host,dbname,dbuser,dbpassword)
     @host       = host
@@ -76,7 +76,7 @@ class MysqlDatabase
 end
 
 # change database configuration
- dbObj = MysqlDatabase.new('127.0.0.1','help','root','')
+ dbObj = CrudClass.new('127.0.0.1','help','root','')
  dbObj.connect()
  dbObj.insert_data()
  dbObj.read_data()
